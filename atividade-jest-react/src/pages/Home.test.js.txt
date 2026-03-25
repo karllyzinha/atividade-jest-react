@@ -1,0 +1,10 @@
+import { render, screen } from '@testing-library/react'
+import Home from './Home'
+
+test('imagem aparece na tela', () => {
+  render(<Home />)
+
+  const img = screen.getByAltText('Imagem exemplo')
+
+  expect(img).toBeInTheDocument()
+})
