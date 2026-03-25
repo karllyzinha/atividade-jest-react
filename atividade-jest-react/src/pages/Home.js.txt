@@ -1,0 +1,12 @@
+import imagem from '../imagens/img1.jpg'
+
+function Home() {
+  return (
+    <div>
+      <h1>Home</h1>
+      <img src={imagem} alt="Imagem exemplo" width="300" />
+    </div>
+  )
+}
+
+export default Home
