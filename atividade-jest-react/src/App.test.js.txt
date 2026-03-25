@@ -1,0 +1,23 @@
+import { render, screen } from '@testing-library/react'
+import { MemoryRouter } from 'react-router-dom'
+import App from './App'
+
+test('renderiza página Home', () => {
+  render(
+    <MemoryRouter initialEntries={['/']}>
+      <App />
+    </MemoryRouter>
+  )
+
+  expect(screen.getByText(/Home/i)).toBeInTheDocument()
+})
+
+test('renderiza página Sobre', () => {
+  render(
+    <MemoryRouter initialEntries={['/sobre']}>
+      <App />
+    </MemoryRouter>
+  )
+
+  expect(screen.getByText(/Sobre/i)).toBeInTheDocument()
+})
